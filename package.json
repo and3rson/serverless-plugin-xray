@@ -34,7 +34,9 @@
     "url": "https://github.com/AlexanderMS/serverless-plugin-xray/issues"
   },
   "homepage": "https://github.com/AlexanderMS/serverless-plugin-xray#readme",
-  "dependencies": {},
+  "peerDependencies": {
+    "serverless": "^2.60 || 3"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.13.0",
