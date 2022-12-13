@@ -36,10 +36,10 @@ provider:
         - "*"
 
 plugins:
-  - serverless-plugin-tracing
+  - serverless-plugin-xray
 
 custom:
-  serverless-plugin-tracing:
+  serverless-plugin-xray:
     tracing: true # enable tracing
 
 functions:
