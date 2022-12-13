@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Unit tests
+on:
+  workflow_call: {}
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: npm
+          cache-dependency-path: 'package-lock.json'
+      - name: Install dependencies
+        run: |
+          npm i --include=dev
+      - name: Test
+        run: |
+          npm test
+          npm run lint
+          npm run posttest
+      - name: Coverage
+        run: |
+          npm run coverage
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

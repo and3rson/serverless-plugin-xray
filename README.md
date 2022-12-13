@@ -1,8 +1,10 @@
-# serverless-plugin-tracing
+# serverless-plugin-xray
 
-[![npm version](https://badge.fury.io/js/serverless-plugin-tracing.svg)](https://badge.fury.io/js/serverless-plugin-tracing)
-[![CircleCI](https://circleci.com/gh/alex-murashkin/serverless-plugin-tracing.svg?style=shield)](https://circleci.com/gh/alex-murashkin/serverless-plugin-tracing)
-[![Coverage Status](https://coveralls.io/repos/github/AlexanderMS/serverless-plugin-tracing/badge.svg)](https://coveralls.io/github/alex-murashkin/serverless-plugin-tracing)
+A maintained fork of outdated [serverless-plugin-tracing](https://github.com/alex-murashkin/serverless-plugin-tracing).
+
+[![npm version](https://badge.fury.io/js/serverless-plugin-xray.svg)](https://badge.fury.io/js/serverless-plugin-xray)
+[![Coverage Status](https://coveralls.io/repos/github/and3rson/serverless-plugin-xray/badge.svg)](https://coveralls.io/github/and3rson/serverless-plugin-xray)
+![Github Checks](https://github.com/and3rson/serverless-plugin-xray/actions/workflows/tests.yml/badge.svg)
 
 Enables AWS X-Ray (https://aws.amazon.com/xray/) for the entire Serverless stack or individual functions.
 
@@ -15,7 +17,7 @@ Note: 1.x was tested to work well with `serverless@1.13.2`. Some older versions 
 may not work due to outdated Javascript SDK that
 does not support `TracingConfig`.
 
-`npm install --save-dev serverless-plugin-tracing`
+`npm install --save-dev serverless-plugin-xray`
 
 Example `serverless.yml`:
 
